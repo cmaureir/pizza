@@ -4,7 +4,7 @@ PYTHON_LIB = /usr/lib
 BOOST_INC = /usr/include
 BOOST_LIB = /usr/lib
 
-TARGET = hello
+TARGET = simple
 
 ${TARGET}.so: ${TARGET}.o
 	g++ -shared -Wl,-export-dynamic,-rpath=${PYTHON_LIB} ${TARGET}.o -L${BOOST_LIB} -lboost_python37 -L${PYTHON_LIB} -lpython3.7m -o ${TARGET}.so

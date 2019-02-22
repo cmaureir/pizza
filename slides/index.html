@@ -42,12 +42,7 @@
   <section>
   <div id="left70">
     <h3>Bring your <img style="display: inline-block; vertical-align: middle;margin: 0 auto;width: 15%; background: 0; border: 0;" src="img/cpp_logo.svg" /> Project to <img style="display: inline-block; vertical-align: middle;width: 13%; background: 0; border: 0;" src="img/python.svg" /> land</h3>
-  </div>
-  <div id="right30">
-    <p style="font-size: 45%;">
-      <br/>
-      <br/>
-      <br/>
+    <p style="font-size: 60%;margin-top: 20%;">
       Dr. <i class="yellow">Cristián</i> Maureira-Fredes<br/>
       <i class="blue-light">Software Engineer</i> @ TQtC
     </p>
@@ -61,24 +56,26 @@
   </section>
   <!--***************************************************************************-->
   <section>
-    <h2>C++ and Python</h2>
     <div id="left">
-        <ul>
-            <li>General purpose</li>
-            <li>Multi paradigm</li>
-            <li>Statically typed</li>
-            <li>Compiled</li>
-            <li>Provides low-level memory manipulation</li>
+        <h3>C++</h3>
+        <ul style=>
+
+            <li class="fragment fade-in" data-fragment-index="1">General purpose</li>
+            <li class="fragment fade-in" data-fragment-index="2">Multi paradigm</li>
+            <li class="fragment fade-in" data-fragment-index="3">Statically typed</li>
+            <li class="fragment fade-in" data-fragment-index="4">Compiled</li>
+            <li class="fragment fade-in" data-fragment-index="5">Provides low-level memory manipulation</li>
         </ul>
     </div>
     <div id="right" style="text-align: left;">
+        <h3>Python</h3>
         <ul>
-            <li>General purpose</li>
-            <li>Multi paradigm</li>
-            <li><i class="blue-light">Dynamically</i> typed</li>
-            <li><i class="blue-light">Interpreted</i></li>
-            <li><i class="blue-light">Automatic</i> memory management</li>
-            <li><i class="green">Code readability</i></li>
+            <li class="fragment fade-in" data-fragment-index="1" >General purpose</li>
+            <li class="fragment fade-in" data-fragment-index="2">Multi paradigm</li>
+            <li class="fragment fade-in" data-fragment-index="3"><i class="blue-light">Dynamically</i> typed</li>
+            <li class="fragment fade-in" data-fragment-index="4"><i class="blue-light">Interpreted</i></li>
+            <li class="fragment fade-in" data-fragment-index="5"><i class="blue-light">Automatic</i> memory management</li>
+            <li class="fragment fade-in" data-fragment-index="6"><i class="green">Code readability</i></li>
         </ul>
     </div>
   </section>
@@ -96,11 +93,10 @@ if __name__ == "__main__":
     <pre style="font-size: 60%;width: 80%;">
         <code class="c++" data-trim data-noescape>
 #include &lt;iostream&gt;
-using namespace std;
 
 int main() {
 
-    cout &lt;&lt; "Python Pizza Berlin 2019" &lt;&lt; endl;
+    std::cout &lt;&lt; "Python Pizza Berlin 2019";
     return 0;
 }
         </code>
@@ -129,43 +125,57 @@ int main() {
   <!--***************************************************************************-->
   <section>
     <h3>Looking under <i class="yellow-light">Python</i></h3>
+    <pre style="font-size: 60%;width: 80%;">
+        <code class="c" data-trim data-noescape>
+// Include/object.h
+typedef struct _object {
+    _PyObject_HEAD_EXTRA
+    Py_ssize_t ob_refcnt;
+    struct _typeobject *ob_type;
+} PyObject;
+        </code>
+    </pre>
+  </section>
+  <section>
+    <img style="width: 60%;" src="img/joke.jpg"/>
   </section>
   <!--***************************************************************************-->
   <section>
-    <h3>Creating a module <i class="yellow-light">CPython</i></h3>
+    <h3>Creating a <i class="yellow-light">CPython</i> module</h3>
   </section>
   <!--***************************************************************************-->
   <section>
-    <h2>What is Qt?</h2>
+    <h3>so...</h3>
+    <h2>What is <i class="green">Qt</i>?</h2>
+  </section>
+  <section>
+    <h3>Qt <i class="green">/kjut/</i></h3>
+    <p style="font-size: 100%;margin-top: 5%;">
+        Cross platform <i class="yellow">C++</i> framework, for <i class="yellow">UI</i> and more.
+    </p>
+<img style="width: 5%;background:0;border:0;" src="img/qticons/Automation.svg"/>
+<img style="width: 5%;background:0;border:0;" src="img/qticons/Automotive.svg"/>
+<img style="width: 5%;background:0;border:0;" src="img/qticons/Desktop.svg"/>
+<img style="width: 5%;background:0;border:0;" src="img/qticons/DTP.svg"/>
+<img style="width: 5%;background:0;border:0;" src="img/qticons/Embeddeddev.svg"/>
+<img style="width: 5%;background:0;border:0;" src="img/qticons/imac-iphone-ipad.svg"/>
+<img style="width: 5%;background:0;border:0;" src="img/qticons/IOT.svg"/>
+<img style="width: 5%;background:0;border:0;" src="img/qticons/Medical.svg"/>
+<img style="width: 5%;background:0;border:0;" src="img/qticons/Perpetual_sub.svg"/>
+<img style="width: 5%;background:0;border:0;" src="img/qticons/stopwatch.svg"/>
+<img style="width: 5%;background:0;border:0;" src="img/qticons/Training.svg"/>
+    <br/>
+    <span class="fragment fade-in" data-fragment-index="2">...but what about <i class="yellow">Python</i>?</span>
   </section>
   <!--***************************************************************************-->
   <section>
-    <h3>Which options do we have?</h3>
-    <div id="left30">
-        <ul>
-            <li>Pure CPython</li>
-            <li>SWIG</li>
-            <li>Boost::Python</li>
-        </ul>
-    </div>
-
-    <div id="right70">
-    <pre style="font-size: 45%;">
-    <code class="python" data-trim data-noescape>
-import sys
-from PySide2.QtWidgets import QApplication, QLabel
-
-# Qt Application
-app = QApplication([])
-
-# Qt Widget
-label = QLabel("Hello World!")
-label.show()
-
-# Executing app
-sys.exit(app.exec_())
-    </code></pre>
-    </div>
+    <h3>It's 2008...</h3>
+    <h4>Which <i class="yellow">options</i> do we have?</h4>
+    <ul>
+        <li class="fragment fade-in" data-fragment-index="1">CPython</li>
+        <li class="fragment fade-in" data-fragment-index="2">SWIG - <i class="blue-light">http://www.swig.org/</i></li>
+        <li class="fragment fade-in" data-fragment-index="3">Boost::Python - <i class="blue-light">https://www.boost.org/</i></li>
+    </ul>
   </section>
   <!--***************************************************************************-->
   <section>
@@ -192,10 +202,32 @@ sys.exit(app.exec_())
   </section>
   <!--***************************************************************************-->
   <section>
-    <h2>Shiboken</h2>
+    <h2>Shiboken<br/><i class="yellow">死某剣</i></h2>
   </section>
   <section>
-    <h2>Hello World</h2>
+    <h3>Other nice options</h3>
+    <ul>
+        <li>pybind11 - <i class="blue-light">https://github.com/pybind/pybind11</i></li>
+        <li>cffi - <i class="blue-light">https://cffi.readthedocs.io</i></li>
+    </ul>
+  </section>
+  <section>
+    <div id="left30">
+    <p style="font-size: 450%;text-align: center;">
+    Q<i class="green">&amp;</i>A<br/>
+    </p>
+    </div>
+    <div id="right70">
+        <p style="margin-right: 10%; font-size: 90%;">
+            <a href="https://www.qt.io/qt-for-python">qt.io/qt-for-python</a><br/>
+            <a href="https://pyside.org">pyside.org</a><br/>
+            <br/>
+           @cmaureir<br/>
+        <img src="img/twitter.png" style="background: rgba(0,0,0,0);height: 50px; border: 0px;">
+        <img src="img/github_white.png"  style="background: rgba(0,0,0,0);height: 50px; border: 0px;">
+        <img src="img/linkedin.png"  style="background: rgba(0,0,0,0);height: 50px; border: 0px;"><br/>
+        </p>
+    </div>
   </section>
 </div>
 </div>

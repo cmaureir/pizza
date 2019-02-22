@@ -1,12 +1,12 @@
-char const* greet()
+char const* hello()
 {
    return "Hello Python Pizza Berlin!";
 }
 
 #include <boost/python.hpp>
 
-BOOST_PYTHON_MODULE(hello)
+BOOST_PYTHON_MODULE(simple)
 {
     using namespace boost::python;
-    def("greet", greet);
+    def("hello", hello);
 }
