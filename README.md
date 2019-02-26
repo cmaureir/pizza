@@ -14,6 +14,8 @@ most powerful C++ UI framework in Python, Shiboken.
 After this talk you will have no excuse to provide Python bindings
 for your favorite C/C++ project.
 
+Check out the [slides](https://maureira.xyz/pizza)!
+
 ### Links and resources
 
 * [CPython](https://github.com/python/cpython)
